@@ -1,0 +1,20 @@
+{
+  "name": "bansal-agrawal",
+  "version": "1.0.0",
+  "description": "Bansal & Agrawal Chartered Accountants Website",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "prod:build": "npm run build && npm run optimize",
+    "optimize": "npm run optimize:images",
+    "optimize:images": "echo 'Image optimization would go here'"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

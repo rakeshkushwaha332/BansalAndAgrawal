@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  html {
+    @apply w-full h-full;
+  }
+  body {
+    @apply w-full h-full m-0 p-0 bg-gray-50 min-h-screen overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-16;
+  }
+  
+  .heading {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-6;
+  }
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+.animate-float {
+    animation: float 2s ease-in-out infinite;
+}
+
+.hero-animate-bg {
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes hero-slide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.hero-bg {
+    background-size: cover;
+    background-position: center;
+    transition: none;
+}
+
+.hero-slide {
+    transition: transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Additional styles */
+.animate-walk {
+    animation: walk 2s ease-in-out infinite;
+}
+
+@keyframes walk {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Fix for image paths */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure proper spacing */
+section {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix for hero section */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+/* Fix for navigation */
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* Fix for footer */
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact page specific styles */
+.contact-form {
+    @apply bg-white shadow-lg p-6 rounded-xl;
+}
+
+.contact-info {
+    @apply flex flex-col space-y-6;
+}
+
+/* About page specific styles */
+.about-content {
+    @apply max-w-5xl mx-auto px-6 py-16;
+}
+
+.leader-section {
+    @apply bg-[#e5e7f2] py-16 px-6;
+}
+
+/* Sector page specific styles */
+.industry-list {
+    @apply space-y-2;
+}
+
+.industry-list li {
+    @apply text-gray-700;
+} 
